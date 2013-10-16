@@ -1,0 +1,7 @@
+{
+    "BaseURL": "https://smp-pNNNNNNtrial.hanatrial.ondemand.com",
+    "ES1Root": "https://sapes1.sapdevcenter.com",
+    "AppName": "qmacro.myfirst",
+    "Username": "yourusername",
+    "Password": "yourpassword"
+}
