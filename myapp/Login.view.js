@@ -13,7 +13,7 @@ sap.ui.jsview("com.opensap.Login", {
                 contentMiddle: [
                     new sap.m.Button({
                         text: "Login",
-                        tap: [oController.loginTap, oController]
+                        press: [oController.loginPress, oController]
                     }),
                 ]
             }),

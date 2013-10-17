@@ -18,7 +18,7 @@ sap.ui.jsview("com.opensap.ProductList", {
                 title: "{Name}",
                 description: "{Description}",
                 type: sap.m.ListType.Navigation,
-                tap: [oController.handleProductListItemTap, oController]
+                press: [oController.handleProductListItemPress, oController]
             }),
         });
 

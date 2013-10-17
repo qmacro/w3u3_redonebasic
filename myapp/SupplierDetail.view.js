@@ -15,7 +15,7 @@ sap.ui.jsview("com.opensap.SupplierDetail", {
         var oPage = new sap.m.Page({
             title: "{CompanyName}",
             showNavButton: true,
-            navButtonTap: [oController.handleNavButtonTap, oController],
+            navButtonPress: [oController.handleNavButtonPress, oController],
             content: [
                 new sap.m.List({
                     items: [

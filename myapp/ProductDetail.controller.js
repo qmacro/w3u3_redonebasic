@@ -1,10 +1,10 @@
 sap.ui.controller("com.opensap.ProductDetail", {
     
-    handleNavButtonTap: function(oEvent) {
+    handleNavButtonPress: function(oEvent) {
         this.getView().getParent().back();
     },
 
-    handleSupplierTap: function(oEvent) {
+    handleSupplierPress: function(oEvent) {
         this.getView().getParent().to("SupplierDetail", {
             context: oEvent.getSource().getBindingContext()
         });

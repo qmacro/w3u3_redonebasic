@@ -1,6 +1,6 @@
 sap.ui.controller("com.opensap.SupplierDetail", {
     
-    handleNavButtonTap: function(oEvent) {
+    handleNavButtonPress: function(oEvent) {
         this.getView().getParent().back();
     }
 

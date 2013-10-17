@@ -15,7 +15,7 @@ sap.ui.jsview("com.opensap.ProductDetail", {
         return new sap.m.Page({
             title: "{Name}",
             showNavButton: true,
-            navButtonTap: [oController.handleNavButtonTap, oController],
+            navButtonPress: [oController.handleNavButtonPress, oController],
             content: [
                 new sap.m.List({
                     items: [
@@ -35,7 +35,7 @@ sap.ui.jsview("com.opensap.ProductDetail", {
                             title: "Supplier",
                             description: "{SupplierName}",
                             type: sap.m.ListType.Navigation,
-                            tap: [oController.handleSupplierTap, oController]
+                            press: [oController.handleSupplierPress, oController]
                         })
                     ]
                 }),

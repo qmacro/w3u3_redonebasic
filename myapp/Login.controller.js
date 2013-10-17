@@ -2,7 +2,7 @@ sap.ui.controller("com.opensap.Login", {
 
     oSMPModel: null,
 
-    loginTap: function(oEvent) {
+    loginPress: function(oEvent) {
 
         var oAppData = sap.ui.getCore().getModel("app").getData();
 
