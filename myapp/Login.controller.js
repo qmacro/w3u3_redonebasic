@@ -14,29 +14,27 @@ sap.ui.controller("com.opensap.Login", {
 
         this.oSMPModel.create('/Connections', { DeviceType: "Android" }, null, 
             jQuery.proxy(function(mResult) {
-                sap.ui.getCore().getModel("app").setData({AppCID: mResult.ApplicationConnectionId}, true);
                 localStorage['APPCID'] = mResult.ApplicationConnectionId;
-                this.showProducts();
+                this.showProducts(mResult.ApplicationConnectionId);
             }, this),
             jQuery.proxy(function(oError) {
                 jQuery.sap.log.error("Connection creation failed");
                 // Bypass if we already have an id
                 if (/an application connection with the same id already exists/.test(oError.response.body)) {
                     jQuery.sap.log.info("Bypassing failure: already have a connection");
-                    sap.ui.getCore().getModel("app").setData({AppCID: localStorage['APPCID']}, true);
-                    this.showProducts();
+                    this.showProducts(localStorage['APPCID']);
                 }
             }, this)
         );
 
     },
 
-    showProducts: function() {
+    showProducts: function(sAPPCID) {
 
         var oAppData = sap.ui.getCore().getModel("app").getData();
         var oModel = new sap.ui.model.odata.ODataModel(
             oAppData.BaseURL + "/" + oAppData.AppName,
-            { 'X-SUP-APPCID': oAppData.AppCID }
+            { 'X-SUP-APPCID': sAPPCID }
         );
         sap.ui.getCore().setModel(oModel);
 

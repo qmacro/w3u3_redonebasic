@@ -35,13 +35,7 @@ sap.ui.jsview("com.opensap.ProductDetail", {
                             title: "Supplier",
                             description: "{SupplierName}",
                             type: sap.m.ListType.Navigation,
-                            tap: [oController.handleSupplierTap, oController],
-                            customData: [
-                                new sap.ui.core.CustomData({
-                                    key: "id",
-                                    value: "{SupplierId}"
-                                })
-                            ]
+                            tap: [oController.handleSupplierTap, oController]
                         })
                     ]
                 }),
