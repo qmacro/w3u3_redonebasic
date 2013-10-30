@@ -38,8 +38,9 @@ sap.ui.controller("com.opensap.Login", {
         );
         sap.ui.getCore().setModel(oModel);
 
-        var oApp = this.getView().getParent();
-        oApp.to("ProductList");
+        sap.ui.getCore().getEventBus().publish("nav", "to", {
+            id : "ProductList"
+        });
 
     }
 

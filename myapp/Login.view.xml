@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View controllerName="com.opensap.Login" xmlns:core="sap.ui.core"
+    xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+    <Page
+        title="Login"
+        showNavButton="false">
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Button
+                        text="Login"
+                        press="loginPress" />
+                </contentMiddle>
+            </Bar>
+        </footer>
+        <List>
+            <InputListItem label="Username">
+                <Input value="{app>/Username}" />
+            </InputListItem>
+            <InputListItem label="Password">
+                <Input value="{app>/Password}" type="Password" />
+            </InputListItem>
+        </List>
+    </Page>
+
+</core:View>

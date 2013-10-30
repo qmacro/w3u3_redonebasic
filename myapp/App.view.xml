@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View controllerName="com.opensap.App" xmlns:core="sap.ui.core"
+    xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+    <App id="app">
+        <mvc:XMLView viewName="com.opensap.Login" id="Login" />
+        <mvc:XMLView viewName="com.opensap.ProductList" id="ProductList" />
+        <mvc:XMLView viewName="com.opensap.ProductDetail" id="ProductDetail" />
+        <mvc:XMLView viewName="com.opensap.SupplierDetail" id="SupplierDetail" />
+    </App>
+</core:View>

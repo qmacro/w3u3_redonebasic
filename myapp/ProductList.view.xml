@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View controllerName="com.opensap.ProductList" xmlns:core="sap.ui.core"
+    xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+    <Page
+        title="Products">
+        <List
+            headerText="Product Overview"
+            items="{
+                path: '/ProductCollection'
+            }">
+            <StandardListItem
+                title="{Name}"
+                description="{Description}"
+                type="Navigation"
+                press="handleProductListItemPress" />
+        </List>
+    </Page>
+
+</core:View>

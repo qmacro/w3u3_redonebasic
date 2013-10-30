@@ -1,7 +1,16 @@
 sap.ui.controller("com.opensap.SupplierDetail", {
     
-    handleNavButtonPress: function(oEvent) {
-        this.getView().getParent().back();
-    }
+    onInit: function() {
+        this.getView().addDelegate({
+            onBeforeShow: jQuery.proxy(function(evt) {
+                evt.to.setBindingContext(evt.data);
+                this.getView().byId("Supplier").bindElement("Supplier");
+            }, this)
+        });
+    },
 
-})
+    handleNavButtonPress: function(oEvent) {
+        sap.ui.getCore().getEventBus().publish("nav", "back");
+    },
+
+});

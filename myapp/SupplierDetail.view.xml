@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View controllerName="com.opensap.SupplierDetail" xmlns:core="sap.ui.core"
+    xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+    <Page
+        id="Supplier"
+        title="{CompanyName}"
+        showNavButton="true"
+        navButtonPress="handleNavButtonPress">
+        <List>
+            <DisplayListItem label="Company Name" value="{CompanyName}" />
+            <DisplayListItem label="Web Address" value="{WebAddress}" />
+            <DisplayListItem label="Phone Number" value="{PhoneNumber}" />
+        </List>
+    </Page>
+
+</core:View>

@@ -1,13 +1,23 @@
 sap.ui.controller("com.opensap.ProductDetail", {
     
+    onInit: function() {
+        this.getView().addDelegate({
+            onBeforeShow: function(evt) {
+                evt.to.setBindingContext(evt.data);
+            }
+        });
+    },
+
     handleNavButtonPress: function(oEvent) {
-        this.getView().getParent().back();
+        sap.ui.getCore().getEventBus().publish("nav", "back");
     },
 
     handleSupplierPress: function(oEvent) {
-        this.getView().getParent().to("SupplierDetail", {
+        sap.ui.getCore().getEventBus().publish("nav", "to", {
+            id : "SupplierDetail",
             context: oEvent.getSource().getBindingContext()
         });
     }
+
 
 });

@@ -2,7 +2,8 @@ sap.ui.controller("com.opensap.ProductList", {
     
     handleProductListItemPress: function(oEvent) {
 
-        this.getView().getParent().to("ProductDetail", {
+        sap.ui.getCore().getEventBus().publish("nav", "to", {
+            id : "ProductDetail",
             context: oEvent.getSource().getBindingContext()
         });
 
